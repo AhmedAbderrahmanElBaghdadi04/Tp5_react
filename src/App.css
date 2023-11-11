@@ -1,38 +1,39 @@
-.App {
+/* Add this style in a separate CSS file or in the same file using the `style` prop in the component */
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
+}
+
+.center {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+h1 {
+  color: #333;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.img_calculator {
+  max-width: 100%;
+  height: auto;
+  margin-top: 20px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+a {
+  display: block;
+  margin-top: 20px;
+  color: #3498db;
+  text-decoration: none;
+  font-weight: bold;
 }
 
-.App-link {
-  color: #61dafb;
+a:hover {
+  text-decoration: underline;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.center22{
+  background-color: #333;
+  color: red;
+  text-decoration: solid 2px red;
 }

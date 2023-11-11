@@ -1,0 +1,49 @@
+/* Add this style in a separate CSS file or in the same file using the `style` prop in the component */
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .container {
+    text-align: center;
+    margin-top: 50px; /* Adjust the margin as needed */
+  }
+  
+  h1,h2,h3 {
+    color: rgba(27,151,153,1);
+  }
+  .imges{
+    background-color: #074747;
+    height: 500px;
+    width: 500px;
+    display: flex;
+    justify-self: center;
+  }
+  .img_calculator {
+    max-width: 70%;
+    height: 350px;
+    width: 350px;
+    margin-top: 20px;
+    border-radius: 30px 30px 30px 30px;
+  }
+  .img_calculator:hover {
+    width: 450px;
+    height: 450px;
+  }
+  
+  a {
+    display: block;
+    margin-top: 20px;
+    color: #3498db;
+    text-decoration: none;
+    font-weight: bold;
+    
+  }
+  
+  a:hover {
+    text-decoration: none;
+  }
+  

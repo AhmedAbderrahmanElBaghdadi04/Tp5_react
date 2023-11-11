@@ -1,0 +1,26 @@
+/* Add this style in a separate CSS file or in the same file using the `style` prop in the component */
+
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: rgb(255,255,255);
+    
+  }
+  
+  #container_flu {
+    display: flex;
+    flex-direction: column;
+
+    width: 100%;
+    height: 80%;
+    
+    
+  }
+  
+  .A1 {
+  
+  }
+  
+
+  
