@@ -1,20 +1,44 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import './App3.css'
+import './App3.css';
+import Container from 'react-bootstrap/Container';
+import Nav from 'react-bootstrap/Nav';
+import Navbar from 'react-bootstrap/Navbar';
+import Logo from '../COMPONOENTS/imgs/favicon.ico';
+import { Row, Col } from 'react-bootstrap';
+import './bootstrap/css/bootstrap.min.css'
 
-export default function Navbar() {
+export default function Navbar1() {
+  const [isDarkTheme, setIsDarkTheme] = useState(false);
+
+  const switchTheme = () => {
+    setIsDarkTheme(prevTheme => !prevTheme);
+    document.body.classList.toggle('dark_theme');
+  };
+
   return (
-    <div>
-      <nav className='nav'>
-        <center>
-            <Link to='/TP1'><center>Calculator</center></Link>
-            <Link to='/TP2'><center>Slider</center></Link>
-            <Link to='/TP3'><center>ToDo List</center></Link>
-            <Link to='/TP4'><center>API</center></Link>
-        </center>
-      </nav>
-      <h1><b><center>Hi <br />Welcome to Our Website</center></b></h1><br />
-      <h2><center>All the TPs are here</center></h2><br /><center><h3><b>Enjoy The Moment</b></h3></center>
-    </div>
-  )
+    <>
+      <Navbar bg={isDarkTheme ? 'dark' : 'light'} variant={isDarkTheme ? 'dark' : 'light'} expand="lg">
+        <Container>
+          <Navbar.Brand as={Link} to='/' >
+            <img src={Logo} alt="" as={Link} to="/" className="d-flex justify-content-space-between align-items-center"/>
+          </Navbar.Brand>
+          <Navbar.Toggle aria-controls="basic-navbar-nav" />
+          <Navbar.Collapse id="basic-navbar-nav">
+            <Nav className="me-auto">
+              <Nav.Link as={Link} to='/TP1'>Calculator</Nav.Link>
+              <Nav.Link as={Link} to="/TP2">Slider</Nav.Link>
+              <Nav.Link as={Link} to="/TP3">ToDoList</Nav.Link>
+              <Nav.Link as={Link} to="/TP4">API</Nav.Link>
+              <Nav.Link as={Link} to="/">Language</Nav.Link>
+            </Nav>
+            <Nav>
+              <Nav.Link onClick={switchTheme} className='{dark_theme?dark:light}'>DARK/LIGHT</Nav.Link>
+            </Nav>
+          </Navbar.Collapse>
+        </Container>
+      </Navbar>
+      <br />
+    </>
+  );
 }
